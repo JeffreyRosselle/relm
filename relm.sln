@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DF89F418-BF06-4A70-86B3-D7620DC74A7C}"
+	ProjectSection(SolutionItems) = preProject
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A112704F-9648-4676-9229-A9461CC3B32D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{92A01C41-02E2-43FA-969B-0D53E252FCC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Relm", "Relm\Relm.csproj", "{C07C0DC7-EC26-4C33-A6FA-FE95C497833D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relm.Tests", "Relm.Tests\Relm.Tests.csproj", "{15A8C22E-1C18-44A9-951A-D65F69083800}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C07C0DC7-EC26-4C33-A6FA-FE95C497833D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07C0DC7-EC26-4C33-A6FA-FE95C497833D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07C0DC7-EC26-4C33-A6FA-FE95C497833D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07C0DC7-EC26-4C33-A6FA-FE95C497833D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A8C22E-1C18-44A9-951A-D65F69083800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A8C22E-1C18-44A9-951A-D65F69083800}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A8C22E-1C18-44A9-951A-D65F69083800}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A8C22E-1C18-44A9-951A-D65F69083800}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C07C0DC7-EC26-4C33-A6FA-FE95C497833D} = {A112704F-9648-4676-9229-A9461CC3B32D}
+		{15A8C22E-1C18-44A9-951A-D65F69083800} = {92A01C41-02E2-43FA-969B-0D53E252FCC9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F998800-C145-44AA-92B9-7F0D8705A8B5}
+	EndGlobalSection
+EndGlobal

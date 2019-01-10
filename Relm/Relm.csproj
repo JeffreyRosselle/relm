@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Relm</PackageId>
+    <PackageVersion>2.0.1</PackageVersion>
+    <Authors>Jeffrey Rosselle</Authors>
+    <PackageLicenseUrl>http://opensource.org/licenses/MS-PL</PackageLicenseUrl>
+    <Description>Relm is a lightweight nuget package used to alter your images or byte arrays. Crop your image, change its size and type or compress them to save disk space.</Description>
+    <PackageProjectUrl>https://github.com/JeffreyRosselle/relm</PackageProjectUrl>
+    <PackageReleaseNotes>Updated Project Url.</PackageReleaseNotes>
+    <Copyright>Copyright ©2019 Jeffrey Rosselle</Copyright>
+    <PackageTags>photoshop image converter compress crop resize relm dragoonflight jeffrey rosselle</PackageTags>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
+  </ItemGroup>
+
+</Project>

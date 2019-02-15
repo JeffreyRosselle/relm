@@ -37,8 +37,7 @@ namespace Relm.Converters
         {
             try
             {
-                using (var memoryStream = new MemoryStream(byteArray))
-                    return Image.FromStream(memoryStream);
+                return Image.FromStream(new MemoryStream(byteArray));
             }
             catch
             {

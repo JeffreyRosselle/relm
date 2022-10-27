@@ -18,7 +18,8 @@ namespace Relm.Converters
             {
                 try
                 {
-                    image.Save(ms, image.RawFormat);
+                    var newImage = new Bitmap(image);
+                    newImage.Save(ms, image.RawFormat);
                 }
                 catch (ArgumentNullException)
                 {
@@ -26,6 +27,7 @@ namespace Relm.Converters
                 }
                 return ms.ToArray();
             }
+
         }
 
         /// <summary>
@@ -37,7 +39,12 @@ namespace Relm.Converters
         {
             try
             {
-                return Image.FromStream(new MemoryStream(byteArray));
+                Image image;
+                using (var ms = new MemoryStream(byteArray))
+                {
+                    image = Image.FromStream(ms);
+                }
+                return image;
             }
             catch
             {

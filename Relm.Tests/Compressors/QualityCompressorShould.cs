@@ -19,7 +19,7 @@ namespace Relm.Tests.Compressors
             Assert.IsNotNull(image1);
             Assert.IsNotNull(image2);
             Assert.IsNotNull(image3);
-            Assert.IsTrue(image.Size() > image1.Size());
+            Assert.IsTrue(image.Size() == image1.Size());
             Assert.IsTrue(image1.Size() > image2.Size());
             Assert.IsTrue(image2.Size() > image3.Size());
         }
@@ -35,7 +35,7 @@ namespace Relm.Tests.Compressors
             Assert.IsNotNull(array1);
             Assert.IsNotNull(array2);
             Assert.IsNotNull(array3);
-            Assert.IsTrue(array.Size() > array1.Size());
+            Assert.IsTrue(array.Size() == array1.Size());
             Assert.IsTrue(array1.Size() > array2.Size());
             Assert.IsTrue(array2.Size() > array3.Size());
         }

@@ -113,7 +113,8 @@ namespace Relm.Converters
             byte[] array;
             using (var ms = new MemoryStream())
             {
-                image.Save(ms, GetEncoder(format), myEncoderParameters);
+                var newImage = new Bitmap(image);
+                newImage.Save(ms, GetEncoder(format), myEncoderParameters);
                 array = ms.ToArray();
             }
 
@@ -122,14 +123,11 @@ namespace Relm.Converters
 
         private static ImageCodecInfo GetEncoder(ImageFormat format)
         {
-
-            ImageCodecInfo[] codecs = ImageCodecInfo.GetImageDecoders();
+            var codecs = ImageCodecInfo.GetImageDecoders();
 
             foreach (var codec in codecs)
-            {
                 if (codec.FormatID == format.Guid)
                     return codec;
-            }
             return null;
         }
     }

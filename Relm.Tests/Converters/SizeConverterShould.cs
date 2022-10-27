@@ -66,6 +66,39 @@ namespace Relm.Tests.Converters
         }
 
         [TestMethod]
+        public void SetMaxWidthImage()
+        {
+            var output = new Images()._100100.SetMaxWidth(50, false);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(50, output.Width);
+            Assert.AreEqual(100, output.Height);
+            Assert.IsTrue(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
+        public void SetMaxWidthImageRatio()
+        {
+            var output = new Images()._100100.SetMaxWidth(50);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(50, output.Width);
+            Assert.AreEqual(50, output.Height);
+            Assert.IsTrue(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
+        public void SetNoMaxWidthImage()
+        {
+            var output = new Images()._100100.SetMaxWidth(200, false);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(100, output.Width);
+            Assert.AreEqual(100, output.Height);
+            Assert.IsFalse(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
         public void SetHeightImage()
         {
             var output = new Images()._100100.SetHeight(50, false);
@@ -118,6 +151,39 @@ namespace Relm.Tests.Converters
             Assert.AreEqual(100, output.Width);
             Assert.AreEqual(100, output.Height);
             Assert.AreEqual(new Images()._100100.Size(), output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
+        public void SetMaxHeightImage()
+        {
+            var output = new Images()._100100.SetMaxHeight(50, false);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(100, output.Width);
+            Assert.AreEqual(50, output.Height);
+            Assert.IsTrue(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
+        public void SetMaxHeightImageRatio()
+        {
+            var output = new Images()._100100.SetMaxHeight(50);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(50, output.Width);
+            Assert.AreEqual(50, output.Height);
+            Assert.IsTrue(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
+        public void SetNoMaxHeightImage()
+        {
+            var output = new Images()._100100.SetMaxHeight(200, false);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(100, output.Width);
+            Assert.AreEqual(100, output.Height);
+            Assert.IsFalse(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
         }
 
         [TestMethod]
@@ -176,6 +242,39 @@ namespace Relm.Tests.Converters
         }
 
         [TestMethod]
+        public void SetMaxWidthByteArray()
+        {
+            var output = new Images()._100100.ToByteArray().SetMaxWidth(50, false);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(50, output.Width());
+            Assert.AreEqual(100, output.Height());
+            Assert.IsTrue(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
+        public void SetMaxWidthByteArrayRatio()
+        {
+            var output = new Images()._100100.ToByteArray().SetMaxWidth(50);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(50, output.Width());
+            Assert.AreEqual(50, output.Height());
+            Assert.IsTrue(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
+        public void SetNoMaxWidthByteArray()
+        {
+            var output = new Images()._100100.ToByteArray().SetMaxWidth(200, false);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(100, output.Width());
+            Assert.AreEqual(100, output.Height());
+            Assert.IsFalse(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
         public void SetHeightByteArray()
         {
             var output = new Images()._100100.ToByteArray().SetHeight(50, false);
@@ -228,6 +327,39 @@ namespace Relm.Tests.Converters
             Assert.AreEqual(100, output.Width());
             Assert.AreEqual(100, output.Height());
             Assert.AreEqual(new Images()._100100.Size(), output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
+        public void SetMaxHeightByteArray()
+        {
+            var output = new Images()._100100.ToByteArray().SetMaxHeight(50, false);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(100, output.Width());
+            Assert.AreEqual(50, output.Height());
+            Assert.IsTrue(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
+        public void SetMaxHeightByteArrayRatio()
+        {
+            var output = new Images()._100100.ToByteArray().SetMaxHeight(50);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(50, output.Width());
+            Assert.AreEqual(50, output.Height());
+            Assert.IsTrue(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
+        }
+
+        [TestMethod]
+        public void SetNoMaxHeightByteArray()
+        {
+            var output = new Images()._100100.ToByteArray().SetMaxHeight(200, false);
+
+            Assert.IsNotNull(output);
+            Assert.AreEqual(100, output.Width());
+            Assert.AreEqual(100, output.Height());
+            Assert.IsFalse(new Images()._100100.Size() > output.Size(), $"Original: {new Images()._100100.Size()}  | Output: {output.Size()}");
         }
         #endregion
 

@@ -45,7 +45,6 @@ namespace Relm.Tests.Converters
 
             Assert.IsNotNull(output);
             Assert.AreEqual(image.Size, output.Size);
-            Assert.AreEqual(image.PixelFormat, output.PixelFormat);
         }
 
         [TestMethod]
